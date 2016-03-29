@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NacedaEmailsRails</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">HTML Email Creator: NACEDA</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create a new email<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/form/news">Newsletter</a></li>
+                <li><a href="/form/action-alert">Action Alert</a></li>
+                <li><a href="/form/people-places">People & Places</a></li>
+                <li><a href="/form/announcement">Announcement</a></li>
+              </ul>
+            </li>
+            <li><%= link_to 'Help', help_path %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+      <div class="container">
+        <div class="page-header">
+          <h1><%= yield(:page_title) %></h1>
+          <%= yield(:page_header) %>
+        </div>
+
+          <%= yield %>
+
+      </div><!-- end container -->
+      <footer class="footer">
+        <div class="container">
+          <p>Application developed by <a href="http://katiemfritz.com">Katie M Fritz, LLC</a>, 2016. Email content belongs to <a href="http://naceda.org">NACEDA</a>.</p>
+        </div>
+      </footer>
+
+    </body>
+  </html>
