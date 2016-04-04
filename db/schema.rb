@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329195617) do
+ActiveRecord::Schema.define(version: 20160404113248) do
 
   create_table "announcements", force: :cascade do |t|
     t.string   "subject",     default: "", null: false
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 20160329195617) do
     t.string   "story_link"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string   "subject"
+    t.string   "date"
+    t.string   "sender"
+    t.string   "teaser_text"
+    t.text     "naceda_news"
+    t.text     "member_news"
+    t.text     "federal_news"
+    t.text     "partner_news"
+    t.text     "naceda_events"
+    t.text     "member_events"
+    t.text     "federal_events"
+    t.text     "partner_events"
+    t.text     "jobs"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

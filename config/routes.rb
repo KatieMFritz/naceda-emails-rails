@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :newsletters
   resources :announcements
   root 'static#home'
   # when a visitor goes to the root of our app (`/`), send
