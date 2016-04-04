@@ -4,3 +4,12 @@
 
 <%= link_to 'Show', @announcement %> |
 <%= link_to 'Back', announcements_path %>
+
+<script type="text/javascript">
+  $('textarea').trumbowyg({
+    resetCss: true,
+    removeformatPasted: true,
+    autogrow: true,
+    btns: ['viewHTML', '|', 'formatting', 'bold', 'italic', '|', 'btnGrp-lists', '|', 'link', 'horizontalRule']
+  });
+</script>
