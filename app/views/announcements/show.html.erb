@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @announcement.subject %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @announcement.date %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @announcement.sender %>
+</p>
+
+<p>
+  <strong>Teaser text:</strong>
+  <%= @announcement.teaser_text %>
+</p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @announcement.headline %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @announcement.author %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @announcement.story %>
+</p>
+
+<p>
+  <strong>Image link:</strong>
+  <%= @announcement.image_link %>
+</p>
+
+<p>
+  <strong>Story link:</strong>
+  <%= @announcement.story_link %>
+</p>
+
+<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+<%= link_to 'Back', announcements_path %>

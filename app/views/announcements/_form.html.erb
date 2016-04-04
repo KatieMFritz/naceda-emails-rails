@@ -1,0 +1,53 @@
+<%= form_for(@announcement) do |f| %>
+  <% if @announcement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
+
+      <ul>
+      <% @announcement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :sender %><br>
+    <%= f.text_field :sender %>
+  </div>
+  <div class="field">
+    <%= f.label :teaser_text %><br>
+    <%= f.text_field :teaser_text %>
+  </div>
+  <div class="field">
+    <%= f.label :headline %><br>
+    <%= f.text_field :headline %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :story %><br>
+    <%= f.text_area :story %>
+  </div>
+  <div class="field">
+    <%= f.label :image_link %><br>
+    <%= f.text_field :image_link %>
+  </div>
+  <div class="field">
+    <%= f.label :story_link %><br>
+    <%= f.text_field :story_link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

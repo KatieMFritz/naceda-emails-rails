@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NacedaEmailsRails</title>
+    <title>Naceda HTML Email Creator</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -22,7 +22,16 @@
                 <li><a href="/form/news">Newsletter</a></li>
                 <li><a href="/form/action-alert">Action Alert</a></li>
                 <li><a href="/form/people-places">People & Places</a></li>
-                <li><a href="/form/announcement">Announcement</a></li>
+                <li><%= link_to 'New Announcement', new_announcement_path %></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Saved emails<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/form/news">Newsletter</a></li>
+                <li><a href="/form/action-alert">Action Alert</a></li>
+                <li><a href="/form/people-places">People & Places</a></li>
+                <li><%= link_to 'Announcements', announcements_path %></li>
               </ul>
             </li>
             <li><%= link_to 'Help', help_path %></li>
