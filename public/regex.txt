@@ -1,0 +1,13 @@
+Regex
+
+param_exists\?\s(\'\w*)-(\w*\')
+newsletter.has_attribute?($1_$2)
+
+fix left-behind dashes:
+
+has_attribute\?\((\'\w*)-(\w*\')
+has_attribute?($1_$2
+
+
+\@newsletter\.(\w*)-(\w*)
+@newsletter.$1_$2

@@ -1,0 +1,160 @@
+@import 'vendor/email-boilerplate';
+@import 'lib/email-boilerplate.overrides';
+@import 'lib/variables';
+
+#container {
+  width: $email-width;
+  border: 1px solid $gray;
+
+  td > *:first-child {
+    margin-top: 0;
+  }
+  td > *:last-child {
+    margin-bottom: 0;
+  }
+
+  td > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.banner {
+  // width: 718px;
+  // height: 140px;
+  // background-image: url('https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_news.jpg');
+  // background-size: 100% 100%;
+  // color: white;
+  text-align: center;
+}
+
+.sub-banner {
+  width: 100%;
+  background-color: $green;
+
+  td:last-child {
+    white-space: nowrap;
+  }
+}
+
+h3 {
+  margin-top: 1.8em;
+  margin-bottom: 0;
+}
+
+.subtitle, .author {
+  color: $green !important;
+  font-style: italic;
+  margin-top: .5em;
+}
+
+a {
+  color: $blue;
+  text-decoration: underline;
+}
+
+li {
+  margin-bottom: $margin;
+}
+
+#story {
+  margin: 20px 0px;
+  img {
+      max-width: 33%;
+      float: left;
+      margin: 0px 10px 10px 0px;
+  }
+}
+
+.hr {
+  width: 100%;
+  margin-top: $margin * 2;
+  margin-bottom: $margin * 2;
+
+  td {
+    line-height: 0;
+    background: none;
+    border-top: 2px solid $yellow;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.panel {
+  background-color: $light-gray;
+  width: 100%;
+  margin: $margin * 2 auto $margin ;
+  thead {
+  background-color: $gray;
+  }
+  h4 {
+  color: #fff !important;
+  margin: 0px !important;
+  padding: 0px 0px 0px 10px !important;
+  font-size: 120% !important;
+  }
+  p {
+    margin-top: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .hr {
+    margin-top: $margin * 2;
+    margin-bottom: $margin * 2;
+    td {
+      border-top: 1px solid $yellow;
+    }
+  }
+  &.blue {
+    thead {
+      background-color: $blue !important;
+    }
+    h4 {
+      background-color: $blue;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.button {
+  background-color: $green;
+  border: 2px solid darken($green, 10%);
+  border-radius: $border-radius;
+  color:#ffffff;
+  text-decoration: none !important;
+  font-weight: 700;
+  display:inline-block;
+  line-height:44px;
+  text-align:center;
+  width: 300px;
+  margin: 10px auto;
+  -webkit-text-size-adjust:none;
+  mso-hide:all;
+}
+
+.footer {
+	background-color: $gray;
+  text-align: center;
+
+  .soc-btn {
+    padding: 10px;
+  	margin: 10px 10px 30px 10px;
+  	text-decoration:none;
+  	color: #FFF !important;
+    display: inline-block;
+  	text-align:center;
+  }
+
+  a.fb { background-color: #3B5998!important; }
+  a.tw { background-color: #1daced!important; }
+  a.web { background-color: #97c940!important; }
+}

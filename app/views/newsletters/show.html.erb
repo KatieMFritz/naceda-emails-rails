@@ -1,69 +1,145 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title do %>
+  News from Naceda
+<% end %>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @newsletter.subject %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @newsletter.date %>
-</p>
-
-<p>
-  <strong>Sender:</strong>
-  <%= @newsletter.sender %>
-</p>
-
-<p>
-  <strong>Teaser text:</strong>
+<% content_for :teaser_text do %>
   <%= @newsletter.teaser_text %>
-</p>
+<% end %>
 
-<p>
-  <strong>Naceda news:</strong>
+<% content_for :banner_image do %>
+  https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_news.jpg
+<% end %>
+
+<% content_for :banner_alt do %>
+  NACEDA News
+<% end %>
+
+<% content_for :banner_title do %>
+  <h1>News <span class="small">from</span> Naceda</h1>
+  <p class="tagline">News You Can Use to Advance Community Prosperity</p>
+<% end %>
+
+<% if @newsletter.has_attribute?('naceda_news') %>
+  <!-- STRIP: Begin NACEDA news -->
+  <h2>NACEDA News</h2>
   <%= @newsletter.naceda_news %>
-</p>
+<% end %>
 
-<p>
-  <strong>Member news:</strong>
-  <%= @newsletter.member_news %>
-</p>
+<% if @newsletter.has_attribute?('naceda_events') %>
+  <!-- STRIP: Begin NACEDA Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>NACEDA Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= @newsletter.naceda_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End events panel -->
+  <%= hr %>
+<% end %>
 
-<p>
-  <strong>Federal news:</strong>
+<% if @newsletter.has_attribute?('federal_news') %>
+  <!-- STRIP: Begin federal news -->
+  <h2>Federal News</h2>
   <%= @newsletter.federal_news %>
-</p>
+<% end %>
 
-<p>
-  <strong>Partner news:</strong>
+<% if @newsletter.has_attribute?('federal_events') %>
+  <!-- STRIP: Begin Federal Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Federal Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= @newsletter.federal_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
+
+<%= hr %>
+
+<% if @newsletter.has_attribute?('member_news') %>
+  <!-- STRIP: Begin Member News -->
+  <h2>Member News</h2>
+  <%= @newsletter.member_news %>
+<% end %>
+
+<% if @newsletter.has_attribute?('member_events') %>
+  <!-- STRIP: Begin Member Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Member Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= @newsletter.member_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End panel -->
+<% end %>
+
+<%= hr %>
+
+<% if @newsletter.has_attribute?('partner_news') %>
+  <!-- STRIP: Begin Partner News -->
+  <h2>Partner News</h2>
   <%= @newsletter.partner_news %>
-</p>
+<% end %>
 
-<p>
-  <strong>Naceda events:</strong>
-  <%= @newsletter.naceda_events %>
-</p>
+<% if @newsletter.has_attribute?('parter_events') %>
+  <!-- STRIP: Begin Partner Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Partner Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= @newsletter.partner_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End panel -->
+<% end %>
 
-<p>
-  <strong>Member events:</strong>
-  <%= @newsletter.member_events %>
-</p>
+<%= hr %>
 
-<p>
-  <strong>Federal events:</strong>
-  <%= @newsletter.federal_events %>
-</p>
-
-<p>
-  <strong>Partner events:</strong>
-  <%= @newsletter.partner_events %>
-</p>
-
-<p>
-  <strong>Jobs:</strong>
+<% if @newsletter.has_attribute?('jobs') %>
+  <h2>Job Postings</h2>
   <%= @newsletter.jobs %>
-</p>
+  <p><em>To post a job opportunity, contact <a href="mailto:sgunther@naceda.org">Suzanne Gunther</a>. A $25 donation is suggested.</em></p>
+  <%= hr %>
+<% end %>
 
-<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
-<%= link_to 'Back', newsletters_path %>
+<h2>Funding Opportunities</h2>
+<p>Go to our website for current grant opportunities. The're updated throughout the month.</p>
+<%= button  "http://naceda.org/funding-opportunities", "View Funding Opportunities" %>

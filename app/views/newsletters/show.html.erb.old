@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @newsletter.subject %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @newsletter.date %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @newsletter.sender %>
+</p>
+
+<p>
+  <strong>Teaser text:</strong>
+  <%= @newsletter.teaser_text %>
+</p>
+
+<p>
+  <strong>Naceda news:</strong>
+  <%= @newsletter.naceda_news %>
+</p>
+
+<p>
+  <strong>Member news:</strong>
+  <%= @newsletter.member_news %>
+</p>
+
+<p>
+  <strong>Federal news:</strong>
+  <%= @newsletter.federal_news %>
+</p>
+
+<p>
+  <strong>Partner news:</strong>
+  <%= @newsletter.partner_news %>
+</p>
+
+<p>
+  <strong>Naceda events:</strong>
+  <%= @newsletter.naceda_events %>
+</p>
+
+<p>
+  <strong>Member events:</strong>
+  <%= @newsletter.member_events %>
+</p>
+
+<p>
+  <strong>Federal events:</strong>
+  <%= @newsletter.federal_events %>
+</p>
+
+<p>
+  <strong>Partner events:</strong>
+  <%= @newsletter.partner_events %>
+</p>
+
+<p>
+  <strong>Jobs:</strong>
+  <%= @newsletter.jobs %>
+</p>
+
+<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
+<%= link_to 'Back', newsletters_path %>

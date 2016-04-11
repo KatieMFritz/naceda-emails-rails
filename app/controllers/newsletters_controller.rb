@@ -10,6 +10,7 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1
   # GET /newsletters/1.json
   def show
+    render :layout => 'email'
   end
 
   # GET /newsletters/new
