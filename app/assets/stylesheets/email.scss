@@ -1,6 +1,5 @@
-@import 'vendor/email-boilerplate';
-@import 'lib/email-boilerplate.overrides';
-@import 'lib/variables';
+@import 'email-boilerplate';
+@import 'email-boilerplate.overrides';
 
 #container {
   width: $email-width;

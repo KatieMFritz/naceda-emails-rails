@@ -1,0 +1,20 @@
+@import 'variables';
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  color: $dark-gray !important;
+}
+
+body, p, h1, h2, h3, h4, li {
+  line-height: 1.3 !important;
+}
+
+h2 {
+  color: $blue !important;
+  margin-bottom: 0 !important;
+}
+
+h4 {
+  margin-top: 20px !important;
+  color: $dark-gray !important;
+}
