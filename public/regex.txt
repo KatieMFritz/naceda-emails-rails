@@ -11,3 +11,7 @@ has_attribute?($1_$2
 
 \@newsletter\.(\w*)-(\w*)
 @newsletter.$1_$2
+
+Partial variables
+\#\{(\w*)\}
+<%= $1 %>

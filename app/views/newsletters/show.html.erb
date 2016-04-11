@@ -44,7 +44,7 @@
     </tbody>
   </table>
   <!-- STRIP: End events panel -->
-  <%= hr %>
+  <%= render 'layouts/email_hr' %>
 <% end %>
 
 <% if @newsletter.has_attribute?('federal_news') %>
@@ -73,7 +73,7 @@
   </table>
 <% end %>
 
-<%= hr %>
+<%= render 'layouts/email_hr' %>
 
 <% if @newsletter.has_attribute?('member_news') %>
   <!-- STRIP: Begin Member News -->
@@ -102,7 +102,7 @@
   <!-- STRIP: End panel -->
 <% end %>
 
-<%= hr %>
+<%= render 'layouts/email_hr' %>
 
 <% if @newsletter.has_attribute?('partner_news') %>
   <!-- STRIP: Begin Partner News -->
@@ -131,15 +131,15 @@
   <!-- STRIP: End panel -->
 <% end %>
 
-<%= hr %>
+<%= render 'layouts/email_hr' %>
 
 <% if @newsletter.has_attribute?('jobs') %>
   <h2>Job Postings</h2>
   <%= @newsletter.jobs %>
   <p><em>To post a job opportunity, contact <a href="mailto:sgunther@naceda.org">Suzanne Gunther</a>. A $25 donation is suggested.</em></p>
-  <%= hr %>
+  <%= render 'layouts/email_hr' %>
 <% end %>
 
 <h2>Funding Opportunities</h2>
 <p>Go to our website for current grant opportunities. The're updated throughout the month.</p>
-<%= button  "http://naceda.org/funding-opportunities", "View Funding Opportunities" %>
+<%= render 'layouts/email_button', url: "http://naceda.org/funding-opportunities", text: "View Funding Opportunities" %>
