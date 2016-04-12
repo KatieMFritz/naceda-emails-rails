@@ -105,8 +105,8 @@
 
 <% if @newsletter.partner_news.present? %>
   <!-- STRIP: Begin Partner News -->
-  <h2>Partner News</h2>
   <%= render 'layouts/email_hr' %>
+  <h2>Partner News</h2>
   <%= sanitize @newsletter.partner_news %>
 <% end %>
 
