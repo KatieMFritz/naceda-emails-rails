@@ -15,3 +15,9 @@ has_attribute?($1_$2
 Partial variables
 \#\{(\w*)\}
 <%= $1 %>
+
+html_safe to sanitize
+(\@newsletter\.\w*_\w*).html_safe
+sanitize $1
+
+note to self: sanitize out spans and divs
