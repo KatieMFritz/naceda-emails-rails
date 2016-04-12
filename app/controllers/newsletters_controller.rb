@@ -10,7 +10,12 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1
   # GET /newsletters/1.json
   def show
-    render :layout => 'email'
+    document = Roadie::Document.new(
+      render :layout => 'email'
+    )
+    document.asset_providers = [
+      Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/public/')
+    ]
   end
 
   # GET /newsletters/new

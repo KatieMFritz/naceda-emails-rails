@@ -21,3 +21,6 @@ html_safe to sanitize
 sanitize $1
 
 note to self: sanitize out spans and divs
+
+has_attribute\?\(\'(\w*)\'\)
+$1.present?
