@@ -1,23 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Newsletters</h1>
+<h1>All Saved Newsletters</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Subject</th>
       <th>Date</th>
       <th>Sender</th>
       <th>Teaser text</th>
-      <th>Naceda news</th>
-      <th>Member news</th>
-      <th>Federal news</th>
-      <th>Partner news</th>
-      <th>Naceda events</th>
-      <th>Member events</th>
-      <th>Federal events</th>
-      <th>Partner events</th>
-      <th>Jobs</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,18 +20,9 @@
         <td><%= newsletter.date %></td>
         <td><%= newsletter.sender %></td>
         <td><%= newsletter.teaser_text %></td>
-        <td><%= newsletter.naceda_news %></td>
-        <td><%= newsletter.member_news %></td>
-        <td><%= newsletter.federal_news %></td>
-        <td><%= newsletter.partner_news %></td>
-        <td><%= newsletter.naceda_events %></td>
-        <td><%= newsletter.member_events %></td>
-        <td><%= newsletter.federal_events %></td>
-        <td><%= newsletter.partner_events %></td>
-        <td><%= newsletter.jobs %></td>
-        <td><%= link_to 'Show', newsletter %></td>
-        <td><%= link_to 'Edit', edit_newsletter_path(newsletter) %></td>
-        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Preview', newsletter, :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_newsletter_path(newsletter), :class => "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -48,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Newsletter', new_newsletter_path %>
+    <%= link_to 'New Newsletter', new_newsletter_path, :class => "btn btn-success" %>

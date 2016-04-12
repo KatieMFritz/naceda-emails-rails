@@ -2,9 +2,7 @@
   <h1>NACEDA Email Generator</h1>
   <p>Pick an email template to get started.</p>
   <div class="btn-group btn-group-lg" role="group">
-    <a href="/form/news" class="btn btn-default">Newsletter</a>
-    <a href="/form/action-alert" class="btn btn-default">Action Alert</a>
-    <a href="/form/people-places" class="btn btn-default">People & Places</a>
+    <%= link_to 'New Newsletter', new_newsletter_path, :class => "btn btn-default" %>
     <%= link_to 'New Announcement', new_announcement_path, :class => "btn btn-default" %>
   </div>
 </div>
