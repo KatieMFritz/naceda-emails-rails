@@ -173,6 +173,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.2.5)
+  rails-html-sanitizer
   rails_12factor
   roadie (~> 3.1.1)
   sass-rails (~> 5.0)

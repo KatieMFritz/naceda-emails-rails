@@ -27,7 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'roadie', '~> 3.1.1'
 # Use trumbowyg for html input
 gem 'trumbowyg_rails'
-
+# Sanitize html input
+gem 'rails-html-sanitizer'
 
 group :development, :test do
   gem 'sqlite3'
