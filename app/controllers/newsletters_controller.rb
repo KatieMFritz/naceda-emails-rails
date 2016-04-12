@@ -11,11 +11,12 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1.json
   def show
     document = Roadie::Document.new(
-      render :layout => 'email'
+      render_to_string layout: 'email'
     )
     document.asset_providers = [
-      Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/public/')
+      Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/assets/')
     ]
+    send_data document.transform, type: Mime::HTML
   end
 
   # GET /newsletters/new
