@@ -1,5 +1,7 @@
 class NewslettersController < ApplicationController
   before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "naceda", password: "vaidehi", except: [:index, :show]
+
 
   # GET /newsletters
   # GET /newsletters.json
@@ -10,13 +12,14 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1
   # GET /newsletters/1.json
   def show
-    document = Roadie::Document.new(
-      render_to_string layout: 'email'
-    )
-    document.asset_providers = [
-      Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/assets/')
-    ]
-    send_data document.transform, type: Mime::HTML
+    render :layout => 'layouts/email'
+    # document = Roadie::Document.new(
+    #   render_to_string layout: 'email'
+    # )
+    # document.asset_providers = [
+    #   Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/assets/')
+    # ]
+    # send_data document.transform, type: Mime::HTML
   end
 
   # GET /newsletters/new
