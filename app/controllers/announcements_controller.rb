@@ -1,5 +1,6 @@
 class AnnouncementsController < ApplicationController
   before_action :set_announcement, only: [:show, :edit, :update, :destroy]
+    http_basic_authenticate_with name: "naceda", password: "vaidehi", except: [:index, :show]
 
   # GET /announcements
   # GET /announcements.json
