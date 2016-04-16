@@ -20,7 +20,7 @@
         <td><%= newsletter.date %></td>
         <td><%= newsletter.sender %></td>
         <td><%= newsletter.teaser_text %></td>
-        <td><%= link_to 'Preview', newsletter, :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Preview', preview_newsletter_path(newsletter), :class => "btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_newsletter_path(newsletter), :class => "btn btn-info" %></td>
         <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure? This cannot be undone.' }, :class => "btn btn-danger" %></td>
       </tr>

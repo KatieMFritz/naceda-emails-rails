@@ -1,5 +1,5 @@
 class NewslettersController < ApplicationController
-  before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
+  before_action :set_newsletter, only: [:show, :preview, :edit, :update, :destroy]
   http_basic_authenticate_with name: "naceda", password: "vaidehi", except: [:index, :show]
 
 
@@ -20,6 +20,26 @@ class NewslettersController < ApplicationController
     #   Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/assets/')
     # ]
     # send_data document.transform, type: Mime::HTML
+  end
+
+  # GET /newsletters/1/preview
+  def preview
+    # require 'premailer'
+    # premailer = Premailer.new('http://example.com/myfile.html', :warn_level => Premailer::Warnings::SAFE)
+    # # Write the HTML output
+    # File.open("output.html", "w") do |fout|
+    #   fout.puts premailer.to_inline_css
+    # end
+    #
+    # # Write the plain-text output
+    # File.open("output.txt", "w") do |fout|
+    #   fout.puts premailer.to_plain_text
+    # end
+    #
+    # # Output any CSS warnings
+    # premailer.warnings.each do |w|
+    #   puts "#{w[:message]} (#{w[:level]}) may not render properly in #{w[:clients]}"
+    # end
   end
 
   # GET /newsletters/new
