@@ -131,6 +131,12 @@
   <!-- STRIP: End panel -->
 <% end %>
 
+<% if @newsletter.resources.present? %>
+  <%= render 'layouts/email_hr' %>
+  <h2>Resources</h2>
+  <%= sanitize @newsletter.resources %>
+<% end %>
+
 <% if @newsletter.jobs.present? %>
   <%= render 'layouts/email_hr' %>
   <h2>Job Postings</h2>
