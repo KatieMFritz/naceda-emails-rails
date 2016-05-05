@@ -30,6 +30,9 @@ gem 'trumbowyg_rails'
 # Sanitize html input
 gem 'rails-html-sanitizer'
 
+# use passenger to handle multiple server requests
+gem 'puma'
+
 group :development, :test do
   gem 'sqlite3'
 end

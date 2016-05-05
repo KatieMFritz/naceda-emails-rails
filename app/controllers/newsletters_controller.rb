@@ -13,24 +13,19 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1.json
   def show
     render :layout => 'layouts/email'
-    # document = Roadie::Document.new(
-    #   render_to_string layout: 'email'
-    # )
-    # document.asset_providers = [
-    #   Roadie::FilesystemProvider.new(File.dirname(__FILE__) + '/assets/')
-    # ]
-    # send_data document.transform, type: Mime::HTML
   end
 
   # GET /newsletters/1/preview
   def preview
-    # require 'premailer'
-    # premailer = Premailer.new('http://example.com/myfile.html', :warn_level => Premailer::Warnings::SAFE)
-    # # Write the HTML output
-    # File.open("output.html", "w") do |fout|
-    #   fout.puts premailer.to_inline_css
-    # end
-    #
+    newsletter_url = newsletters_url + '/' + params[:id]
+    premailer = Premailer.new(newsletter_url, :remove_comments => true)
+    # Write the HTML output
+    File.open("app/views/newsletters/preview.html.erb", "w") do |fout|
+      fout.puts premailer.to_inline_css
+    end
+
+    render :layout => 'layouts/preview'
+
     # # Write the plain-text output
     # File.open("output.txt", "w") do |fout|
     #   fout.puts premailer.to_plain_text
