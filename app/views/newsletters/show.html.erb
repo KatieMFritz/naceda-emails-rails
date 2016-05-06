@@ -1,3 +1,41 @@
-<iframe src="<%= preview_newsletter_path(@newsletter) %>"></iframe>
+<% content_for :page_title do %>
+  <% if @newsletter.subject.present? %>
+    Subject: <%= @newsletter.subject %>
+  <% end %>
+<% end %>
 
-<pre><%= @email %></pre>
+<% content_for :page_header do %>
+  <div id="metadata">
+    <ul>
+      <% if @newsletter.sender.present? %>
+        <li><strong>Sender:</strong> <%= @newsletter.sender %></li>
+      <% end %>
+      <% if @newsletter.teaser_text.present? %>
+        <li><strong>Teaser Text:</strong> <%= @newsletter.teaser_text %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <div id="preview" class="column">
+    <h2>Preview</h2>
+    <div class="alert alert-info" role="alert">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      To make changes, <a href="<%= edit_newsletter_path(@newsletter) %>">go back to your form</a>.
+    </div>
+    <iframe src="<%= preview_newsletter_path(@newsletter) %>"></iframe>
+  </div>
+  <div id="code" class="column">
+    <h2>Code</h2>
+    <button class="btn btn-primary" id="copy-code" data-clipboard-target="#raw">
+      <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+      Copy to clipboard
+    </button>
+    <textarea id="raw" disabled><%= @email %></textarea>
+  </div>
+</div>
+
+<script type="text/javascript">
+  new Clipboard('.btn');
+</script>
