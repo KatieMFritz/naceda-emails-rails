@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use roadie for emailify action
 gem 'roadie-rails', '~> 1.0'
+# Beautifies HTML
+gem 'htmlbeautifier', '~> 1.1.1'
 # Use trumbowyg for html input
 gem 'trumbowyg_rails'
 # Sanitize html input

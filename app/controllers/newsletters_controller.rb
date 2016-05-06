@@ -61,9 +61,11 @@ private
 
   # Get the inlined contents of the newsletter email
   def set_email
-    @email = NewsletterMailer.newsletter(@newsletter).body.decoded.
-      gsub(/<!--\s*STRIP:.+?-->/, '').
-      gsub(/\n\s*\n\s*\n/, "\n\n")
+    @email = HtmlBeautifier.beautify(
+      NewsletterMailer.newsletter(@newsletter).body.decoded.
+        gsub(/<!--\s*STRIP:.+?-->/, '').
+        gsub(/\n\s*\n\s*\n/, "\n\n")
+    )
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
