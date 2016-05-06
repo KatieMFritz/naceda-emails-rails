@@ -23,8 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use premailer for emailify action
-gem 'premailer'
+# Use roadie for emailify action
+gem 'roadie-rails', '~> 1.0'
 # Use trumbowyg for html input
 gem 'trumbowyg_rails'
 # Sanitize html input

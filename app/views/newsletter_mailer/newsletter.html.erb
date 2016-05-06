@@ -1,0 +1,148 @@
+<% content_for :page_title do %>
+  News from Naceda
+<% end %>
+
+<% content_for :teaser_text do %>
+  <%= @newsletter.teaser_text %>
+<% end %>
+
+<% content_for :banner_image do %>
+  https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_news.jpg
+<% end %>
+
+<% content_for :banner_alt do %>
+  NACEDA News
+<% end %>
+
+<% content_for :banner_title do %>
+  <h1>News <span class="small">from</span> Naceda</h1>
+  <p class="tagline">News You Can Use to Advance Community Prosperity</p>
+<% end %>
+
+<% if @newsletter.federal_news.present? %>
+  <!-- STRIP: Begin federal news -->
+  <h2>Federal News</h2>
+  <%= sanitize @newsletter.federal_news %>
+<% end %>
+
+<% if @newsletter.federal_events.present? %>
+  <!-- STRIP: Begin Federal Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Federal Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= sanitize @newsletter.federal_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
+
+<% if @newsletter.naceda_news.present? %>
+  <!-- STRIP: Begin NACEDA news -->
+  <%= render 'layouts/email_hr' %>
+  <h2>NACEDA News</h2>
+  <%= sanitize @newsletter.naceda_news %>
+<% end %>
+
+<% if @newsletter.naceda_events.present? %>
+  <!-- STRIP: Begin NACEDA Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>NACEDA Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= sanitize @newsletter.naceda_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End events panel -->
+<% end %>
+
+<% if @newsletter.member_news.present? %>
+  <!-- STRIP: Begin Member News -->
+  <%= render 'layouts/email_hr' %>
+  <h2>Member News</h2>
+  <%= sanitize @newsletter.member_news %>
+<% end %>
+
+<% if @newsletter.member_events.present? %>
+  <!-- STRIP: Begin Member Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Member Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= sanitize @newsletter.member_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End panel -->
+<% end %>
+
+<% if @newsletter.partner_news.present? %>
+  <!-- STRIP: Begin Partner News -->
+  <%= render 'layouts/email_hr' %>
+  <h2>Partner News</h2>
+  <%= sanitize @newsletter.partner_news %>
+<% end %>
+
+<% if @newsletter.partner_events.present? %>
+  <!-- STRIP: Begin Partner Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Partner Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= sanitize @newsletter.partner_events %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End panel -->
+<% end %>
+
+<% if @newsletter.resources.present? %>
+  <%= render 'layouts/email_hr' %>
+  <h2>Resources</h2>
+  <%= sanitize @newsletter.resources %>
+<% end %>
+
+<% if @newsletter.jobs.present? %>
+  <%= render 'layouts/email_hr' %>
+  <h2>Job Postings</h2>
+  <%= sanitize @newsletter.jobs %>
+  <p><em>To post a job opportunity, contact <a href="mailto:sgunther@naceda.org">Suzanne Gunther</a>. A $25 donation is suggested.</em></p>
+  <%= render 'layouts/email_hr' %>
+<% end %>
+
+<h2>Funding Opportunities</h2>
+<p>Go to our website for current grant opportunities. The're updated throughout the month.</p>
+<%= render 'layouts/email_button', url: "http://naceda.org/funding-opportunities", text: "View Funding Opportunities" %>
