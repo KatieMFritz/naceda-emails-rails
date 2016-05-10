@@ -1,12 +1,13 @@
 <% content_for :page_title do %>
-  <% if @newsletter.subject.present? %>
-    Subject: <%= @newsletter.subject %>
-  <% end %>
+  Newsletter Preview
 <% end %>
 
 <% content_for :page_header do %>
   <div id="metadata">
     <ul>
+      <% if @newsletter.subject.present? %>
+        <li><strong>Subject:</strong> <%= @newsletter.subject %></li>
+      <% end %>
       <% if @newsletter.sender.present? %>
         <li><strong>Sender:</strong> <%= @newsletter.sender %></li>
       <% end %>
@@ -18,7 +19,7 @@
 <% end %>
 
 <div class="row">
-  <div id="preview" class="column">
+  <div id="preview" class="col-md-8">
     <h2>Preview</h2>
     <div class="alert alert-info" role="alert">
       <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -26,7 +27,7 @@
     </div>
     <iframe src="<%= preview_newsletter_path(@newsletter) %>"></iframe>
   </div>
-  <div id="code" class="column">
+  <div id="code" class="col-md-4">
     <h2>Code</h2>
     <button class="btn btn-primary" id="copy-code" data-clipboard-target="#raw">
       <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>

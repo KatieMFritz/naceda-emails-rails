@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <a class="navbar-brand" href="/">HTML Email Creator: NACEDA</a>
@@ -37,20 +37,21 @@
       </div><!-- /.container-fluid -->
     </nav>
 
+    <div class="container">
+
+      <div class="page-header">
+        <h1><%= yield(:page_title) %></h1>
+        <%= yield(:page_header) %>
+      </div>
+
+      <%= yield %>
+
+    </div><!-- end container -->
+    <footer class="footer">
       <div class="container">
-        <div class="page-header">
-          <h1><%= yield(:page_title) %></h1>
-          <%= yield(:page_header) %>
-        </div>
-
-          <%= yield %>
-
-      </div><!-- end container -->
-      <footer class="footer">
-        <div class="container">
-          <p>Application developed by <a href="http://katiemfritz.com">Katie M Fritz, LLC</a>, 2016. Email content belongs to <a href="http://naceda.org">NACEDA</a>.</p>
-        </div>
-      </footer>
+        <p>Application developed by <a href="http://katiemfritz.com">Katie M Fritz, LLC</a>, 2016. Email content belongs to <a href="http://naceda.org">NACEDA</a>.</p>
+      </div>
+    </footer>
 
     </body>
   </html>

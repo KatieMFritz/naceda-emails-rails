@@ -2,7 +2,6 @@
   <% if @newsletter.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this newsletter from being saved:</h2>
-
       <ul>
       <% @newsletter.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,63 +10,79 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :subject %><br>
-    <%= f.text_field :subject %>
+  <div class="row">
+    <div class="field col-md-4">
+      <%= f.label :subject %><br>
+      <%= f.text_field :subject %>
+    </div>
+    <div class="field col-md-4">
+      <%= f.label :date %><br>
+      <%= f.text_field :date %>
+    </div>
+    <div class="field col-md-4">
+      <%= f.label :sender %><br>
+      <%= f.text_field :sender %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date %>
+  <div class="row">
+    <div class="field col-md-6">
+      <%= f.label :teaser_text %><br>
+      <%= f.text_field :teaser_text %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :sender %><br>
-    <%= f.text_field :sender %>
+  <div class="row">
+    <div class="field col-md-6">
+      <%= f.label :naceda_news %><br>
+      <%= f.text_area :naceda_news %>
+    </div>
+    <div class="field col-md-6">
+      <%= f.label :member_news %><br>
+      <%= f.text_area :member_news %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :teaser_text %><br>
-    <%= f.text_field :teaser_text %>
+  <div class="row">
+    <div class="field col-md-6">
+      <%= f.label :federal_news %><br>
+      <%= f.text_area :federal_news %>
+    </div>
+    <div class="field col-md-6">
+      <%= f.label :partner_news %><br>
+      <%= f.text_area :partner_news %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :naceda_news %><br>
-    <%= f.text_area :naceda_news %>
+  <div class="row">
+    <div class="field col-md-6">
+      <%= f.label :naceda_events %><br>
+      <%= f.text_area :naceda_events %>
+    </div>
+    <div class="field col-md-6">
+      <%= f.label :member_events %><br>
+      <%= f.text_area :member_events %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :member_news %><br>
-    <%= f.text_area :member_news %>
+  <div class="row">
+    <div class="field col-md-6">
+      <%= f.label :federal_events %><br>
+      <%= f.text_area :federal_events %>
+    </div>
+    <div class="field col-md-6">
+      <%= f.label :partner_events %><br>
+      <%= f.text_area :partner_events %>
+    </div>
+  <div class="row">
+    <div class="field col-md-6">
+      <%= f.label :resources %><br>
+      <%= f.text_area :resources %>
+    </div>
+    <div class="field col-md-6">
+      <%= f.label :jobs %><br>
+      <%= f.text_area :jobs %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :federal_news %><br>
-    <%= f.text_area :federal_news %>
-  </div>
-  <div class="field">
-    <%= f.label :partner_news %><br>
-    <%= f.text_area :partner_news %>
-  </div>
-  <div class="field">
-    <%= f.label :naceda_events %><br>
-    <%= f.text_area :naceda_events %>
-  </div>
-  <div class="field">
-    <%= f.label :member_events %><br>
-    <%= f.text_area :member_events %>
-  </div>
-  <div class="field">
-    <%= f.label :federal_events %><br>
-    <%= f.text_area :federal_events %>
-  </div>
-  <div class="field">
-    <%= f.label :partner_events %><br>
-    <%= f.text_area :partner_events %>
-  </div>
-  <div class="field">
-    <%= f.label :resources %><br>
-    <%= f.text_area :resources %>
-  </div>
-  <div class="field">
-    <%= f.label :jobs %><br>
-    <%= f.text_area :jobs %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Save', :class => "btn btn-primary" %>
+  <div class="row">
+    <div class="actions col-md-6">
+      <%= f.submit 'Save & View', :class => "btn btn-primary" %>
+      <%= link_to 'Back', newsletters_path %>
+    </div>
   </div>
 <% end %>
