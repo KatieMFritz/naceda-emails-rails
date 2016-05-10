@@ -1,3 +1,4 @@
+# Handle static pages
 class StaticController < ApplicationController
   def home
   end

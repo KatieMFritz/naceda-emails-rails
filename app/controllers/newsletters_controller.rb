@@ -1,7 +1,10 @@
+# Manage newsletter email template and emails
 class NewslettersController < ApplicationController
-  before_action :set_newsletter, only: [:show, :preview, :edit, :update, :destroy]
+  before_action :set_newsletter,
+                only: [:show, :preview, :edit, :update, :destroy]
   before_action :set_email, only: [:show, :preview]
-  http_basic_authenticate_with name: "naceda", password: "vaidehi", except: [:index, :show]
+  http_basic_authenticate_with name: 'naceda', password: 'vaidehi',
+                               except: [:index, :show]
 
   # GET /newsletters
   def index
@@ -49,10 +52,10 @@ class NewslettersController < ApplicationController
   # DELETE /newsletters/1
   def destroy
     @newsletter.destroy
-    redirect_to newsletters_url, notice: 'Newsletter was successfully destroyed.'
+    redirect_to newsletters_url, notice: 'Newsletter successfully destroyed.'
   end
 
-private
+  private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_newsletter
@@ -62,14 +65,21 @@ private
   # Get the inlined contents of the newsletter email
   def set_email
     @email = HtmlBeautifier.beautify(
-      NewsletterMailer.newsletter(@newsletter).body.decoded.
-        gsub(/<!--\s*STRIP:.+?-->/, '').
-        gsub(/\n\s*\n\s*\n/, "\n\n")
+      NewsletterMailer.newsletter(@newsletter).body.decoded
+        .gsub(/<!--\s*STRIP:.+?-->/, '')
+        .gsub(/\n\s*\n\s*\n/, "\n\n")
     )
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
   def newsletter_params
-    params.require(:newsletter).permit(:subject, :date, :sender, :teaser_text, :naceda_news, :member_news, :federal_news, :partner_news, :naceda_events, :member_events, :federal_events, :partner_events, :resources, :jobs)
+    params.require(:newsletter)
+          .permit(:subject, :date, :sender, :teaser_text,
+                  :naceda_news, :member_news,
+                  :federal_news, :partner_news,
+                  :naceda_events, :member_events,
+                  :federal_events, :partner_events,
+                  :resources, :jobs)
   end
 end
