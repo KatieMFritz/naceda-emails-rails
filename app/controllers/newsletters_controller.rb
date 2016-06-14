@@ -4,7 +4,7 @@ class NewslettersController < ApplicationController
                 only: [:show, :preview, :edit, :update, :destroy]
   before_action :set_email, only: [:show, :preview]
   http_basic_authenticate_with name: 'naceda', password: 'vaidehi',
-                               except: [:index, :show]
+                               except: [:index, :show, :preview]
 
   # GET /newsletters
   def index
