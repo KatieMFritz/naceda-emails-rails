@@ -1,4 +1,4 @@
-## hat is this site?
+## What is this site?
 This is a web application designed for NACEDA, the National Alliance of Community Economic Development Associations, by Katie Fritz.
 
 It's meant to make it easy to create fancy HTML emails using predesigned templates.
