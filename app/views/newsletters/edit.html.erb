@@ -1,14 +1,3 @@
 <h1>Editing Newsletter</h1>
 
 <%= render 'form' %>
-
-<script type="text/javascript">
-  $('textarea').trumbowyg({
-    svgPath: '<%= image_path "/ui/icons.svg" %>',
-    resetCss: true,
-    removeformatPasted: true,
-    autogrow: true,
-    semantic: true,
-    btns: ['viewHTML', '|', 'formatting', 'bold', 'italic', '|', 'btnGrp-lists', '|', 'link', 'horizontalRule']
-  });
-</script>

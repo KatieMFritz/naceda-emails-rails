@@ -13,7 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require trumbowyg/trumbowyg
-//= require turbolinks
-//= require_tree .
-
 //= require bootstrap-sprockets
+//= require_tree .

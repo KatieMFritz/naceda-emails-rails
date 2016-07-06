@@ -2,8 +2,7 @@
 <html>
   <head>
     <title>Naceda HTML Email Creator</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
   </head>
@@ -54,5 +53,6 @@
       </div>
     </footer>
 
-    </body>
-  </html>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>
