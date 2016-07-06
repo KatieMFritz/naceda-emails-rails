@@ -1,5 +1,5 @@
 $('.trumbowyg').trumbowyg({
-  svgPath: '<%= asset_path "/trumbowyg/images/icons.svg" %>',
+  svgPath: '/assets/images/icons.svg',
   resetCss: true,
   removeformatPasted: true,
   autogrow: true,
