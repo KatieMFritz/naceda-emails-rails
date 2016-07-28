@@ -1,8 +1,13 @@
 <div class="jumbotron">
-  <h1>NACEDA Email Generator</h1>
-  <p>Pick an email template to get started.</p>
-  <div class="btn-group btn-group-lg" role="group">
-    <%= link_to 'New Newsletter', new_newsletter_path, :class => "btn btn-default" %>
-    <%= link_to 'New Announcement', new_announcement_path, :class => "btn btn-default" %>
-  </div>
+  <h1 class="display-3">NACEDA Email Generator</h1>
+  <p class="lead">
+    <%= link_to 'Create a Newsletter',
+      new_newsletter_path,
+      :class => "btn btn-success btn-large"
+    %>
+    <%= link_to 'Read Instructions',
+      help_path,
+      :class => "btn btn-info btn-large"
+    %>
+  </p>
 </div>
