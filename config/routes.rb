@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # `about` action in the `static` controller - once again,
   # we're using the format NAME_OF_CONTROLLER#NAME_OF_ACTION
 
+  get '/logout' => 'sessions#logout', as: :logout
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
