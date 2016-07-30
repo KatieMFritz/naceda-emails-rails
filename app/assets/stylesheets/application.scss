@@ -116,7 +116,7 @@ form {
   }
 }
 
-textarea[disabled] {
+textarea[readonly] {
   background-color: $light-gray;
 }
 
