@@ -20,105 +20,30 @@
 <% end %>
 
 <% if @newsletter.federal_news.present? %>
-  <!-- STRIP: Begin federal news -->
-  <h2>Federal News</h2>
+  <!-- STRIP: Begin Policy Update -->
+  <h2>Policy Update</h2>
   <%= sanitize @newsletter.federal_news %>
 <% end %>
 
-<% if @newsletter.federal_events.present? %>
-  <!-- STRIP: Begin Federal Events Panel -->
-  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-    <thead>
-      <tr class="panel-head">
-        <td>
-          <h4>Federal Events</h4>
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= sanitize @newsletter.federal_events %></td>
-      </tr>
-    </tbody>
-  </table>
-<% end %>
-
 <% if @newsletter.naceda_news.present? %>
-  <!-- STRIP: Begin NACEDA news -->
+  <!-- STRIP: Begin Thriving Networks -->
   <%= render 'layouts/email_hr' %>
-  <h2>NACEDA News</h2>
+  <h2>Thriving Networks</h2>
   <%= sanitize @newsletter.naceda_news %>
 <% end %>
 
-<% if @newsletter.naceda_events.present? %>
-  <!-- STRIP: Begin NACEDA Events Panel -->
-  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-    <thead>
-      <tr class="panel-head">
-        <td>
-          <h4>NACEDA Events</h4>
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= sanitize @newsletter.naceda_events %></td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- STRIP: End events panel -->
-<% end %>
-
 <% if @newsletter.member_news.present? %>
-  <!-- STRIP: Begin Member News -->
+  <!-- STRIP: Begin Healthy Places -->
   <%= render 'layouts/email_hr' %>
-  <h2>Member News</h2>
+  <h2>Healthy Places</h2>
   <%= sanitize @newsletter.member_news %>
 <% end %>
 
-<% if @newsletter.member_events.present? %>
-  <!-- STRIP: Begin Member Events Panel -->
-  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-    <thead>
-      <tr class="panel-head">
-        <td>
-          <h4>Member Events</h4>
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= sanitize @newsletter.member_events %></td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- STRIP: End panel -->
-<% end %>
-
 <% if @newsletter.partner_news.present? %>
-  <!-- STRIP: Begin Partner News -->
+  <!-- STRIP: Begin Creative Places -->
   <%= render 'layouts/email_hr' %>
-  <h2>Partner News</h2>
+  <h2>Creative Places</h2>
   <%= sanitize @newsletter.partner_news %>
-<% end %>
-
-<% if @newsletter.partner_events.present? %>
-  <!-- STRIP: Begin Partner Events Panel -->
-  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-    <thead>
-      <tr class="panel-head">
-        <td>
-          <h4>Partner Events</h4>
-        </td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= sanitize @newsletter.partner_events %></td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- STRIP: End panel -->
 <% end %>
 
 <% if @newsletter.resources.present? %>
@@ -136,5 +61,5 @@
 <% end %>
 
 <h2>Funding Opportunities</h2>
-<p>Go to our website for current grant opportunities. The're updated throughout the month.</p>
+<p>Go to our website for current grant opportunities. They're updated throughout the month.</p>
 <%= render 'layouts/email_button', url: "http://naceda.org/funding-opportunities", text: "View Funding Opportunities" %>
