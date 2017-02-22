@@ -3,15 +3,11 @@
 
 #container {
   width: $email-width;
+  margin: 0 auto;
   border: 1px solid $gray;
-
   td > *:first-child {
     margin-top: 0;
   }
-  td > *:last-child {
-    margin-bottom: 0;
-  }
-
   td > *:last-child {
     margin-bottom: 0;
   }
