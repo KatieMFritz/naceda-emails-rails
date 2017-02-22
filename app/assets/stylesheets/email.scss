@@ -49,7 +49,7 @@ img {
   width: 100%;
 
   td {
-    -webkit-padding-start: 10px;
+    padding-left: 10px;
 
     &:last-child {
       white-space: nowrap;
@@ -59,7 +59,7 @@ img {
 
 .content {
   td {
-    -webkit-padding-start: 30px;
+    padding-left: 30px;
   }
 }
 
