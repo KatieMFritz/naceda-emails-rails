@@ -5,9 +5,10 @@ This is a web application designed for NACEDA, the National Alliance of Communit
 
 It's meant to make it easy to create fancy HTML emails using predesigned templates.
 
+The live version is at [https://lit-mesa-60678.herokuapp.com/](https://lit-mesa-60678.herokuapp.com/).
+
 ## I'm from NACEDA. What do I do?
 Check out the [help page](https://lit-mesa-60678.herokuapp.com/help).
-
 
 ## I'm not from NACEDA. Can I get a version of this?
 Sure, I'd be happy to talk with you about adapting this app to your needs. Contact me at katie@katiemfritz.com.
