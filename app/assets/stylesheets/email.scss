@@ -1,13 +1,31 @@
 @import 'email-boilerplate';
 @import 'email-boilerplate.overrides';
 
-#container {
-  width: $email-width;
-  margin: 0 auto;
+// Helps normalize styles in Outlook per https://templates.mailchimp.com/development/css/client-specific-styles/
+
+.ExternalClass {
+  width: 100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font-size,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+
+// Here's where we actually start
+.container {
   border: 1px solid $gray;
+  margin: 0 auto;
+  width: $email-width;
+
   td > *:first-child {
     margin-top: 0;
   }
+
   td > *:last-child {
     margin-bottom: 0;
   }
@@ -23,29 +41,35 @@ img {
 }
 
 .banner {
-  // width: 718px;
-  // height: 140px;
-  // background-image: url('https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_news.jpg');
-  // background-size: 100% 100%;
-  // color: white;
   text-align: center;
 }
 
 .sub-banner {
-  width: 100%;
   background-color: $green;
+  width: 100%;
 
-  td:last-child {
-    white-space: nowrap;
+  td {
+    -webkit-padding-start: 10px;
+
+    &:last-child {
+      white-space: nowrap;
+    }
+  }
+}
+
+.content {
+  td {
+    -webkit-padding-start: 30px;
   }
 }
 
 h3 {
-  margin-top: 1.8em;
   margin-bottom: 0;
+  margin-top: 1.8em;
 }
 
-.subtitle, .author {
+.subtitle,
+.author {
   color: $green !important;
   font-style: italic;
   margin-top: .5em;
@@ -60,59 +84,66 @@ li {
   margin-bottom: $margin;
 }
 
-#story {
-  margin: 20px 0px;
-  img {
-      max-width: 33%;
-      float: left;
-      margin: 0px 10px 10px 0px;
-  }
-}
+// #story {
+//   margin: 20px 0px;
+//   img {
+//       max-width: 33%;
+//       float: left;
+//       margin: 0px 10px 10px 0px;
+//   }
+// }
 
 .hr {
-  width: 100%;
-  margin-top: $margin * 2;
   margin-bottom: $margin * 2;
+  margin-top: $margin * 2;
+  width: 100%;
 
   td {
-    line-height: 0;
     background: none;
     border-top: 2px solid $yellow;
-    width: 100%;
+    line-height: 0;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 }
 
 .panel {
   background-color: $light-gray;
+  margin: $margin * 2 auto $margin;
   width: 100%;
-  margin: $margin * 2 auto $margin ;
+
   thead {
-  background-color: $gray;
+    background-color: $gray;
   }
+
   h4 {
-  color: #fff !important;
-  margin: 0px !important;
-  padding: 0px 0px 0px 10px !important;
-  font-size: 120% !important;
+    color: $white !important;
+    font-size: 120% !important;
+    margin: 0 !important;
+    padding: 0 0 0 10px !important;
   }
+
   p {
     margin-top: 0 !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
   }
+
   .hr {
-    margin-top: $margin * 2;
     margin-bottom: $margin * 2;
+    margin-top: $margin * 2;
+
     td {
       border-top: 1px solid $yellow;
     }
   }
+
   &.blue {
     thead {
       background-color: $blue !important;
     }
+
     h4 {
       background-color: $blue;
       text-transform: uppercase;
@@ -121,36 +152,35 @@ li {
 }
 
 .button {
+  -webkit-text-size-adjust: none;
   background-color: $green;
   border: 2px solid darken($green, 5%);
-  border-radius: none;
-  color:#ffffff;
-  text-decoration: none !important;
+  border-radius:  none;
+  color: $white;
+  display: block;
   font-weight: 700;
-  display:block;
-  line-height:44px;
-  text-align:center;
-  text-decoration: none;
-  width: 300px;
+  line-height: 44px;
   margin: 10px auto;
-  -webkit-text-size-adjust:none;
-  mso-hide:all;
+  mso-hide: all;
+  text-align: center;
+  text-decoration: none !important;
+  width: 300px;
 }
 
 .footer {
-	background-color: $gray;
+  background-color: $gray;
   text-align: center;
 
   .soc-btn {
-    padding: 10px;
-  	margin: 10px 10px 30px 10px;
-  	text-decoration:none;
-  	color: #FFF !important;
+    color: $white !important;
     display: inline-block;
-  	text-align:center;
+    margin: 10px 10px 30px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
   }
 
-  a.fb { background-color: #3B5998!important; }
-  a.tw { background-color: #1daced!important; }
-  a.web { background-color: #97c940!important; }
+  .fb { background-color: $fb-color !important; }
+  .tw { background-color: $twitter-color !important; }
+  .web { background-color: $web-color !important; }
 }
