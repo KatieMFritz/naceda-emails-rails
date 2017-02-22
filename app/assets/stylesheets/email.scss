@@ -126,12 +126,12 @@ li {
 
 .button {
   background-color: $green;
-  border: 2px solid darken($green, 10%);
-  border-radius: $border-radius;
+  border: 2px solid darken($green, 5%);
+  border-radius: none;
   color:#ffffff;
   text-decoration: none !important;
   font-weight: 700;
-  display:inline-block;
+  display:block;
   line-height:44px;
   text-align:center;
   width: 300px;
