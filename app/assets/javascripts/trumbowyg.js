@@ -4,5 +4,5 @@ $('.trumbowyg').trumbowyg({
   removeformatPasted: true,
   autogrow: true,
   semantic: true,
-  btns: ['viewHTML', '|', 'formatting', 'bold', 'italic', '|', 'btnGrp-lists', '|', 'link', 'horizontalRule']
+  btns: ['formatting', 'bold', 'italic', '|', 'btnGrp-lists', '|', 'link','insertImage', 'horizontalRule', '|', 'viewHTML', 'removeformat']
 });
