@@ -18,7 +18,7 @@
 
 // Here's where we actually start
 .container {
-  border: 1px solid $gray;
+  border: 1px solid $gray-base;
   margin: 0 auto;
   width: $email-width;
 
@@ -81,7 +81,7 @@ a {
 }
 
 li {
-  margin-bottom: $margin;
+  margin-bottom: $space-default;
 }
 
 // #story {
@@ -94,8 +94,8 @@ li {
 // }
 
 .hr {
-  margin-bottom: $margin * 2;
-  margin-top: $margin * 2;
+  margin-bottom: $space-default * 2;
+  margin-top: $space-default * 2;
   width: 100%;
 
   td {
@@ -109,12 +109,12 @@ li {
 }
 
 .panel {
-  background-color: $light-gray;
-  margin: $margin * 2 auto $margin;
+  background-color: $gray-light;
+  margin: $space-default * 2 auto $space-default;
   width: 100%;
 
   thead {
-    background-color: $gray;
+    background-color: $gray-base;
   }
 
   h4 {
@@ -131,8 +131,8 @@ li {
   }
 
   .hr {
-    margin-bottom: $margin * 2;
-    margin-top: $margin * 2;
+    margin-bottom: $space-default * 2;
+    margin-top: $space-default * 2;
 
     td {
       border-top: 1px solid $yellow;
@@ -168,7 +168,7 @@ li {
 }
 
 .footer {
-  background-color: $gray;
+  background-color: $gray-base;
   text-align: center;
 
   .soc-btn {

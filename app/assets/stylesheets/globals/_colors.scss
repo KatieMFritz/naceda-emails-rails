@@ -1,0 +1,33 @@
+// Brand Colors
+$blue: #085694;
+$green: #97ca41;
+$white: #ffffff;
+$yellow: #ebc31c;
+
+// Grays
+$gray-base: #bdbec0;
+$gray-dark: #424143;
+$gray-darker: darken ($gray-dark, 20%);
+$gray-light: lighten($gray-base, 20%);
+
+// Social media links
+$fb-color: #3b5998;
+$twitter-color: #1daced;
+$web-color: #97c940;
+
+// Links
+$color-links: $blue;
+$color-links-visited: darken($color-links, 10%);
+$color-links-active: lighten($color-links, 10%);
+
+// Navigation
+$primary-nav-bg: $blue;
+$primary-nav-text: $white;
+$primary-nav-text-hover: $green;
+
+// Brand Colors
+$brand-primary: $green;
+$brand-success: $green;
+$brand-info: $gray-base;
+$brand-warning: $yellow;
+$brand-danger: red;

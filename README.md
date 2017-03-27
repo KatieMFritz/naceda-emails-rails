@@ -21,3 +21,5 @@ Key files for changing the newsletter email template are all inside the `app` di
 - `views/layouts...` (all)
 - `views/newsletters/_form.html.erb`
 - `views/newsletter_mailer/newsletter.html.erb`
+
+WYSIWYG editor: https://github.com/TikiTDO/trumbowyg_rails

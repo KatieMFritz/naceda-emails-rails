@@ -1,7 +1,8 @@
-@import 'variables';
+@import 'globals/_colors';
+@import 'globals/_variables';
 
 body {
-  color: $dark-gray !important;
+  color: $gray-dark !important;
   font-family: Tahoma, Arial, sans-serif;
 }
 
@@ -21,6 +22,6 @@ h2 {
 }
 
 h4 {
-  color: $dark-gray !important;
+  color: $gray-dark !important;
   margin-top: 20px !important;
 }

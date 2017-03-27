@@ -8,8 +8,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Install Bootstrap
-gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

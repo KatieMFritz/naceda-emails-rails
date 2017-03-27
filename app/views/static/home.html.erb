@@ -1,13 +1,16 @@
-<div class="jumbotron">
-  <h1 class="display-3">NACEDA Email Generator</h1>
+<% content_for :page_title do %>
+  NACEDA Email Generator
+<% end %>
+
+<div class="c-marquee">
   <p class="lead">
     <%= link_to 'Create a Newsletter',
       new_newsletter_path,
-      :class => "btn btn-success btn-large"
+      :class => "c-button c-button--primary"
     %>
     <%= link_to 'Read Instructions',
       help_path,
-      :class => "btn btn-info btn-large"
+      :class => "c-button c-button--primary"
     %>
   </p>
 </div>

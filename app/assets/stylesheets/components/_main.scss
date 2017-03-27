@@ -1,0 +1,21 @@
+main {
+  padding: $space-inset-l;
+  a {
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: $space-default;
+  }
+  ol {
+    list-style-type: decimal;
+    margin-left: $space-default;
+  }
+  li {
+    list-style-position: inside;
+    margin: $space-stack-s;
+  }
+  p {
+    margin: $space-stack-default;
+  }
+}

@@ -1,0 +1,106 @@
+body {
+  background-color: $white;
+}
+
+p, li, input, textarea, a, pre, label, h1, h2, h3, h4, h5, h6, th, td {
+  color: $gray-dark;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+// Links
+
+a {
+  color: $color-links;
+
+  &:visited {
+    color: $color-links-visited;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-links-active;
+    text-decoration: underline;
+  }
+}
+
+// Headings
+
+h1 {
+  color: $green;
+  font-size: 3 * $font-size-base;
+  font-weight: bold;
+  margin: $space-stack-default;
+}
+
+h2 {
+  color: $blue;
+  font-size: 1.75 * $font-size-base;
+  font-weight: bold;
+  margin: $space-stack-default;
+}
+
+h3 {
+  color: $gray-dark;
+  font-size: 1.5 * $font-size-base;
+  font-weight: bold;
+  margin: $space-stack-default;
+}
+
+// Buttons
+.c-button {
+  border-radius: $border-radius;
+  color: $white;
+  font-weight: bold;
+  padding: $space-inset-squish-m;
+  text-decoration: none;
+  &:hover, &:focus, &:visited {
+    color: $white;
+    text-decoration: none;
+  }
+
+}
+
+.c-button--primary {
+  @extend .c-button;
+  background-color: $brand-primary;
+  &:hover, &:focus {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+.c-button--info {
+  @extend .c-button;
+  background-color: $brand-info;
+  &:hover, &:focus {
+    background-color: darken($brand-info, 10%);
+  }
+}
+
+.c-button--danger {
+  @extend .c-button;
+  background-color: $brand-danger;
+  &:hover, &:focus {
+    background-color: darken($brand-danger, 10%);
+  }
+}
+
+
+// Utilities
+.u-center-text {
+  text-align: center;
+}
+
+.u-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

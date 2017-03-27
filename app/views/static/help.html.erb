@@ -2,6 +2,10 @@
   Help!
 <% end %>
 
+<% content_for :body_class do %>
+  help
+<% end %>
+
 <% content_for :contact do %>
   katie@katiemfritz.com
 <% end %>
@@ -14,52 +18,40 @@
   <code>NACEDA_NetworkNews_Masthead.jpg</code>
 <% end %>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">What is this site?</h3>
-  </div>
-  <div class="panel-body">
-    <p>This is a web application designed for <a href="https://naceda.org" target="_blank">NACEDA, the National Alliance of Community Economic Development Associations</a>, by <a href="http://katiemfritz.com" target="_blank">Katie Fritz</a>.</p>
-    <p>It's meant to make it easy to create fancy HTML emails using predesigned templates.</p>
-  </div>
-</div>
+<section>
+  <h2>What is this site?</h2>
+  <p>This is a web application designed for <a href="https://naceda.org" target="_blank">NACEDA, the National Alliance of Community Economic Development Associations</a>, by <a href="http://katiemfritz.com" target="_blank">Katie Fritz</a>.</p>
+  <p>It's meant to make it easy to create fancy HTML emails using predesigned templates.</p>
+</section>
+
+<section>
+  <h2>I'm from NACEDA. What do I do?</h2>
+  <ol>
+    <li>Pick your template from the "Create a new email" menu above.</li>
+    <li>Type or paste your content into the appropriate boxes. Use h2 for headlines within boxes.</li>
+    <li>Click Save & View.</li>
+    <li>If you need to make changes, go back to the form. You can click the link above the email preview, find your email in Saved Emails, or bookmark the edit or view page.</li>
+    <li>When you're good to go, click the Copy to Clipboard button on the View page.</li>
+    <li>Paste the code into MemberClicks and follow the rest of the <a href="https://naceda.memberclicks.net/sending-email" target="_blank">instructions for sending email</a>.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>How do I change the Network News banner image?</h2>
+  <p>Follow these instructions <em>exactly</em> or the image won't work! Updating the image this way, rather than in Contact Center, ensures that the formatting stays consistent and that the fallback text will work (for email clients that don't load images). If you decide to change the image name or location, <a href="mailto:<%= yield(:contact).strip %>">contact Katie.</a></p>
+  <ol>
+    <li>Save your new banner as <%= yield(:banner_title).strip.html_safe %>.</li>
+    <li>Log in to <a href="https://naceda.memberclicks.net/administrator" target="_blank">your website admin area</a>.</li>
+    <li>Go to Website > Media Manager.</li>
+    <li>Delete the old <%= yield(:banner_title).strip.html_safe %>.</li>
+    <li>Upload your new <%= yield(:banner_title).strip.html_safe %>.</li>
+    <li>This should make the new image available for all future emails.</li>
+  </ol>
+</section>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">I'm from NACEDA. What do I do?</h3>
-  </div>
-  <div class="panel-body">
-    <ol>
-      <li>Pick your template from the "Create a new email" menu above.</li>
-      <li>Type or paste your content into the appropriate boxes. Use H3 for headlines within boxes.</li>
-      <li>Click Save & View.</li>
-      <li>If you need to make changes, go back to the form. You can click the link above the email preview, find your email in Saved Emails, or bookmark the edit or view page.</li>
-      <li>When you're good to go, click the Copy to Clipboard button on the View page.</li>
-      <li>Paste the code into MemberClicks and follow the rest of the <a href="https://naceda.memberclicks.net/sending-email" target="_blank">instructions for sending email</a>.</li>
-    </ol>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">How do I change the Network News banner image?</h3>
-  </div>
-  <div class="panel-body">
-    <p>Follow these instructions <em>exactly</em> or the image won't work! Updating the image this way, rather than in Contact Center, ensures that the formatting stays consistent and that the fallback text will work (for email clients that don't load images). If you decide to change the image name or location, <a href="mailto:<%= yield(:contact).strip %>">contact Katie.</a></p>
-    <ol>
-      <li>Save your new banner as <%= yield(:banner_title).strip.html_safe %>.</li>
-      <li>Log in to <a href="https://naceda.memberclicks.net/administrator" target="_blank">your website admin area</a>.</li>
-      <li>Go to Website > Media Manager.</li>
-      <li>Delete the old <%= yield(:banner_title).strip.html_safe %>.</li>
-      <li>Upload your new <%= yield(:banner_title).strip.html_safe %>.</li>
-      <li>This should make the new image available for all future emails.</li>
-    </ol>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Why do I have to log in?</h3>
+    <h2 class="panel-title">Why do I have to log in?</h2>
   </div>
   <div class="panel-body">
     <p>Only NACEDA staff should be able to make changes to emails, so a login is required. Everyone uses the same login.</p>
@@ -69,7 +61,7 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">What should I do if I have a problem?</h3>
+    <h2 class="panel-title">What should I do if I have a problem?</h2>
   </div>
   <div class="panel-body">
     <p>Save your work, then <a href="mailto:<%= yield(:contact).strip %>">contact Katie</a>. Please specify what email you are having trouble with and what you are trying to do.</p>
@@ -79,7 +71,7 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">I'm not from NACEDA. Can I get a version of this?</h3>
+    <h2 class="panel-title">I'm not from NACEDA. Can I get a version of this?</h2>
   </div>
   <div class="panel-body">
     <p>Sure, I'd be happy to talk with you about adapting this app to your needs. Contact me at <a href="mailto:<%= yield(:contact).strip %>"><%= yield(:contact).strip %></a>.</p>

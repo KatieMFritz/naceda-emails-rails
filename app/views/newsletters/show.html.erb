@@ -2,6 +2,10 @@
   Newsletter Preview
 <% end %>
 
+<% content_for :body_class do %>
+  preview
+<% end %>
+
 <% content_for :page_header do %>
   <div id="metadata">
     <ul>
@@ -18,12 +22,12 @@
   </div>
 <% end %>
 
-<div class="row">
-  <div id="preview" class="col-md-8">
+<div>
+  <div id="preview">
     <h2>Preview</h2>
     <div class="alert alert-info" role="alert">
-      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      To make changes, <a href="<%= edit_newsletter_path(@newsletter) %>">go back to your form</a>.
+      <p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      To make changes, <a href="<%= edit_newsletter_path(@newsletter) %>">go back to your form</a>.</p>
     </div>
     <iframe src="<%= preview_newsletter_path(@newsletter) %>"></iframe>
   </div>

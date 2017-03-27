@@ -1,69 +1,63 @@
 <%= form_for(@newsletter) do |f| %>
   <% if @newsletter.errors.any? %>
-    <div id="error_explanation">
+    <section id="error_explanation">
       <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this newsletter from being saved:</h2>
       <ul>
       <% @newsletter.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
-    </div>
+    </section>
   <% end %>
 
-  <div class="row">
-    <div class="field col-md-4">
+  <div class="c-editor">
+    <section class="c-editor__field c-editor__field--m">
       <%= f.label :subject %><br>
       <%= f.text_field :subject %>
-    </div>
-    <div class="field col-md-4">
-      <%= f.label :date %><br>
-      <%= f.text_field :date %>
-    </div>
-    <div class="field col-md-4">
-      <%= f.label :sender %><br>
-      <%= f.text_field :sender %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field col-md-6">
+    </section>
+    <section class="c-editor__field c-editor__field--m">
       <%= f.label :teaser_text %><br>
       <%= f.text_field :teaser_text %>
-    </div>
+    </section>
+    <section class="c-editor__field c-editor__field--s">
+      <%= f.label :date %><br>
+      <%= f.text_field :date %>
+    </section>
+    <section class="c-editor__field c-editor__field--s">
+      <%= f.label :sender %><br>
+      <%= f.text_field :sender %>
+    </section>
   </div>
-  <div class="row">
-    <div class="field col-md-6">
+  <div class="c-editor">
+    <section class="c-editor__field c-editor__field--l">
       <%= f.label :federal_news, 'Policy Update' %><br>
       <%= f.text_area :federal_news, class: 'trumbowyg' %>
-    </div>
-    <div class="field col-md-6">
+    </section>
+    <section class="c-editor__field c-editor__field--l">
       <%= f.label :naceda_news, 'Thriving Networks' %><br>
       <%= f.text_area :naceda_news, class: 'trumbowyg' %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field col-md-6">
+    </section>
+    <section class="c-editor__field c-editor__field--l">
       <%= f.label :member_news, 'Healthy Places' %><br>
       <%= f.text_area :member_news, class: 'trumbowyg' %>
-    </div>
-    <div class="field col-md-6">
+    </section>
+    <section class="c-editor__field c-editor__field--l">
       <%= f.label :partner_news, 'Creative Places' %><br>
       <%= f.text_area :partner_news, class: 'trumbowyg' %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="field col-md-6">
+    </section>
+    <section class="c-editor__field c-editor__field--l">
       <%= f.label :resources, 'Resources' %><br>
       <%= f.text_area :resources, class: 'trumbowyg' %>
-    </div>
-    <div class="field col-md-6">
+    </section>
+    <section class="c-editor__field c-editor__field--l">
       <%= f.label :jobs, 'Job Postings' %><br>
       <%= f.text_area :jobs, class: 'trumbowyg' %>
-    </div>
+    </section>
   </div>
-  <div class="row">
-    <div class="actions col-md-6">
-      <%= f.submit 'Save & View', :class => "btn btn-primary" %>
+  <div class="c-editor">
+    <section class="c-editor__field c-editor__field--s">
+      <%= f.submit 'Save & View', :class => "c-button c-button--primary" %>
       <!-- <%= link_to 'Back', newsletters_path %> -->
-    </div>
+    </section>
   </div>
 <% end %>

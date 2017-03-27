@@ -1,0 +1,33 @@
+.c-editor {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .c-editor__field {
+    margin: $space-inline-l;
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      border-radius: $border-radius;
+      padding: $space-inset-s;
+      vertical-align: top;
+      width: 100%;
+    }
+  }
+  .c-editor__field--s {
+    flex-basis: 8em;
+  }
+  .c-editor__field--m {
+    flex-basis: 24em;
+  }
+  .c-editor__field--l {
+    flex-basis: 32em;
+  }
+}
+
+.trumbowyg-box,
+.trumbowyg-editor {
+  margin-left: 0px!important;
+}
+
+

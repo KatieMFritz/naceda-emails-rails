@@ -1,0 +1,26 @@
+table {
+  border-collapse: collapse;
+  border: 1px $gray-base solid;
+  max-width: 100%;
+  thead {
+    tr {
+      background-color: $blue;
+      th {
+        color: $white;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $gray-light;
+      }
+    }
+  }
+  th, td {
+    border: 1px solid $gray-base;
+    padding: $space-inset-default;
+  }
+}
