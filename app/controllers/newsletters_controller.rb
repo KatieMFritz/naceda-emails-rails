@@ -34,7 +34,7 @@ class NewslettersController < ApplicationController
     @newsletter = Newsletter.new(newsletter_params)
 
     if @newsletter.save
-      redirect_to @newsletter, notice: 'Newsletter was successfully created.'
+      redirect_to @newsletter, notice: '<p class="c-notice c-notice-success">Newsletter was successfully created.</p>'
     else
       render :new
     end
@@ -43,7 +43,7 @@ class NewslettersController < ApplicationController
   # PATCH/PUT /newsletters/1
   def update
     if @newsletter.update(newsletter_params)
-      redirect_to @newsletter, notice: 'Newsletter was successfully updated.'
+      redirect_to @newsletter, notice: '<p class="c-notice c-notice--success">Newsletter was successfully updated.</p>'
     else
       render :edit
     end
@@ -52,7 +52,7 @@ class NewslettersController < ApplicationController
   # DELETE /newsletters/1
   def destroy
     @newsletter.destroy
-    redirect_to newsletters_url, notice: 'Newsletter successfully destroyed.'
+    redirect_to newsletters_url, notice: '<p class="c-notice c-notice--success">Newsletter successfully destroyed.</p>'
   end
 
   private

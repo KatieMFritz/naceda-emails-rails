@@ -1,46 +1,25 @@
+.u-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 pre {
   background-color:$gray-light;
-  padding: 10px;
+  padding: $space-inset-s;
   font-size: .75 * $font-size-base;
 }
 
-.preview iframe {
+#preview iframe {
   width: 100%;
   min-width: 600px;
-  height: 1000px;
+  height: 800px;
 }
 
 #code textarea {
   width: 100%;
-  height: 1000px;
-}
-
-.instructions {
-  font-size: 1.2em;
-  color: $brand-warning;
-}
-
-.panel, .alert {
-  button, .c-button {
-    a, a:hover {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
-
-.c-button {
-  .glyphicon {
-    margin: 0 5px;
-  }
-}
-
-
-#copy-code {
-  font-size: 1.2em;
-  height: 50px;
-  padding: 0 30px;
-  margin-bottom: 20px;
+  // height: 100%;
+  padding: $space-inset-default;
 }
 
 textarea[readonly] {

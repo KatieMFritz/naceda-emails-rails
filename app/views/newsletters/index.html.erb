@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<div id="notice"><%=raw notice %></div>
 
 <h1>All Saved Newsletters</h1>
 
@@ -20,9 +20,9 @@
         <td><%= newsletter.date %></td>
         <td><%= newsletter.sender %></td>
         <td><%= newsletter.teaser_text %></td>
-        <td><%= link_to 'View', newsletter_path(newsletter), :class => "c-button c-button--primary" %></td>
-        <td><%= link_to 'Edit', edit_newsletter_path(newsletter), :class => "c-button c-button--info" %></td>
-        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure? This cannot be undone.' }, :class => "c-button c-button--danger" %></td>
+        <td><%= link_to ' View', newsletter_path(newsletter), :class => " icon-eye c-button c-button--primary" %></td>
+        <td><%= link_to 'Edit', edit_newsletter_path(newsletter), :class => "icon-pencil c-button c-button--info" %></td>
+        <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure? This cannot be undone.' }, :class => "icon-trash c-button c-button--danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-    <%= link_to 'New Newsletter', new_newsletter_path, :class => "c-button c-button--primary" %>
+    <%= link_to ' New Newsletter', new_newsletter_path, :class => "icon-plus c-button c-button--primary" %>

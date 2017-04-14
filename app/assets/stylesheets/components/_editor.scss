@@ -25,6 +25,17 @@
   }
 }
 
+.c-instructions {
+  background: lighten($brand-info, 67%);
+  border: 4px $brand-info solid;
+  margin: $space-stack-l;
+  padding: $space-inset-l;
+
+  h3, li, p {
+    color: $brand-info;
+  }
+}
+
 .trumbowyg-box,
 .trumbowyg-editor {
   margin-left: 0px!important;

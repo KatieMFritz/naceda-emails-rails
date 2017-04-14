@@ -1,0 +1,19 @@
+.c-notice {
+  margin: $space-stack-default;
+  padding: $space-inset-l;
+  &.c-notice--success {
+    background-color: lighten($brand-success, 20%);
+    [class*='icon'] {
+      color: $brand-success;
+    }
+  }
+  &.c-notice--info {
+    background-color: lighten($brand-info, 60%);
+    [class*='icon'] {
+      color: $brand-info;
+    }
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

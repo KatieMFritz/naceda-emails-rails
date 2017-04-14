@@ -7,7 +7,15 @@
 <% end %>
 
 <% content_for :page_header do %>
-  <div id="metadata">
+<% end %>
+
+<div class="u-row">
+  <section class="c-notice c-notice--info" role="alert">
+      <p><span class="icon-info" aria-hidden="true"></span>
+      To make changes, <a href="<%= edit_newsletter_path(@newsletter) %>">go back to your form</a>.</p>
+    </section>
+
+  <section id="metadata">
     <ul>
       <% if @newsletter.subject.present? %>
         <li><strong>Subject:</strong> <%= @newsletter.subject %></li>
@@ -19,28 +27,25 @@
         <li><strong>Teaser Text:</strong> <%= @newsletter.teaser_text %></li>
       <% end %>
     </ul>
-  </div>
-<% end %>
+  </section>
+</div>
 
-<div>
-  <div id="preview">
+<div class="u-row">
+  <section id="preview">
     <h2>Preview</h2>
-    <div class="alert alert-info" role="alert">
-      <p><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      To make changes, <a href="<%= edit_newsletter_path(@newsletter) %>">go back to your form</a>.</p>
-    </div>
     <iframe src="<%= preview_newsletter_path(@newsletter) %>"></iframe>
-  </div>
-  <div id="code" class="col-md-4">
+  </section>
+
+  <section id="code">
     <h2>Code</h2>
-    <button class="btn btn-primary" id="copy-code" data-clipboard-target="#raw">
-      <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+    <button class="c-button c-button--primary" id="copy-code" data-clipboard-target="#raw">
+      <span class="icon-clipboard" aria-hidden="true"></span>
       Copy to clipboard
     </button>
     <textarea id="raw" readonly><%= @email %></textarea>
-  </div>
+  </section>
 </div>
 
 <script type="text/javascript">
-  new Clipboard('.btn');
+  new Clipboard('#copy-code');
 </script>
